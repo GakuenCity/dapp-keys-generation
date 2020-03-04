@@ -1,0 +1,11 @@
+body, input, .navigator-toolbox, .toolbarbutton-text, .sidebar-title{
+  text-shadow: 0px 0px 1px #ACACAC;
+}
+
+body {
+  font-family: "Roboto Slab", "Noto Sans", SegoeUI, "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Yu Gothic UI", "Meiryo UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
+.swal-overlay--show-modal {
+  z-index: 9999999 !important;
+}

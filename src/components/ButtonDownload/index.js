@@ -1,6 +1,6 @@
 import React from 'react'
 import icon from './icon.svg'
-
+import { messages } from '../../utils/messages'
 export const ButtonDownload = ({
   download = undefined,
   extraClassName = '',
@@ -8,7 +8,7 @@ export const ButtonDownload = ({
   id = '',
   networkBranch = '',
   onClick = null,
-  text = 'Download'
+  text = messages.DOWNLOAD
 }) => {
   return (
     <a

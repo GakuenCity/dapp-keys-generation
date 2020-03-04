@@ -6,12 +6,8 @@ $ky-Keys-gap: 40px;
         #{ $property }: $poa-purple;
     }
 
-    &#{ & }-sokol {
-        #{ $property }: $sokol-cyan;
-    }
-
-    &#{ & }-kovan {
-        #{ $property }: $kovan-cyan;
+    &#{ & }-test {
+        #{ $property }: $test-cyan;
     }
 
 }
@@ -19,20 +15,6 @@ $ky-Keys-gap: 40px;
 @mixin keys-color-variants($property) {
 
     @include keys-color-variants-base($property);
-
-    &#{ & }-dai {
-        #{ $property }: $xdai-orange;
-    }
-
-}
-
-@mixin keys-color-variants-dai-dark($property) {
-
-    @include keys-color-variants-base($property);
-
-    &#{ & }-dai {
-        #{ $property }: #333;
-    }
 
 }
 
@@ -71,8 +53,6 @@ $ky-Keys-gap: 40px;
     line-height: 1.2;
     margin: 0 0 25px;
     text-align: left;
-
-    @include keys-color-variants-dai-dark('color');
 }
 
 .ky-Keys_HashContainer {
@@ -88,12 +68,10 @@ $ky-Keys-gap: 40px;
     margin: 0;
     text-align: left;
     word-break: break-word;
-
-    @include keys-color-variants-dai-dark('color');
 }
 
 .ky-Keys_Copy {
-    background-image: url('#{ $base-images-path }/Keys/poa.svg');
+    background-image: url('#{ $base-images-path }/Keys/core.svg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 14px 14px;
@@ -102,19 +80,11 @@ $ky-Keys-gap: 40px;
     width: 20px;
 
     &#{ & }-core {
-        background-image: url('#{ $base-images-path }/Keys/poa.svg');
+        background-image: url('#{ $base-images-path }/Keys/core.svg');
     }
 
-    &#{ & }-sokol {
-        background-image: url('#{ $base-images-path }/Keys/sokol.svg');
-    }
-
-    &#{ & }-dai {
-        background-image: url('#{ $base-images-path }/Keys/dai.svg');
-    }
-
-    &#{ & }-kovan {
-        background-image: url('#{ $base-images-path }/Keys/kovan.svg');
+    &#{ & }-test {
+        background-image: url('#{ $base-images-path }/Keys/test.svg');
     }
 
     .ky-Keys_HashContainer & {
@@ -173,8 +143,6 @@ $ky-Keys-gap: 40px;
     line-height: 1.5;
     margin: 0;
     text-align: left;
-
-    @include keys-color-variants-dai-dark('color');
 }
 
 .ky-Keys_WarningIcon {

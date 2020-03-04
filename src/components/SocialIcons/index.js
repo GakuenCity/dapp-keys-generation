@@ -1,16 +1,14 @@
 import React from 'react'
 import { IconGithub } from '../IconGithub'
-import { IconPOA } from '../IconPOA'
+// import { IconPOA } from '../IconPOA'
 import { IconTelegram } from '../IconTelegram'
 import { IconTwitter } from '../IconTwitter'
 
 const getIconBackgroundColor = networkBranch => {
   return (
     {
-      dai: '#e3e7e9',
       poa: '#fff',
-      sokol: '#fff',
-      kovan: '#fff'
+      test: '#fff'
     }[networkBranch] || '#fff'
   )
 }
@@ -18,10 +16,8 @@ const getIconBackgroundColor = networkBranch => {
 const getIconColor = networkBranch => {
   return (
     {
-      dai: '#333',
       poa: '#5c34a2',
-      sokol: '#6ac9b9',
-      kovan: '#6ac9b9'
+      test: '#6ac9b9'
     }[networkBranch] || '#5c34a2'
   )
 }
@@ -35,22 +31,22 @@ export const SocialIcons = ({ extraClass = '', networkBranch = '' }) => {
       <IconTwitter
         backgroundColor={backgroundColor}
         color={iconColor}
-        text="POA Twitter"
-        url="https://twitter.com/poanetwork"
+        text="GakuenCity Twitter"
+        url="#"
       />
       <IconTelegram
         backgroundColor={backgroundColor}
         color={iconColor}
-        text="POA Telegram"
-        url="https://t.me/oraclesnetwork"
+        text="GakuenCity Telegram"
+        url="#"
       />
       <IconGithub
         backgroundColor={backgroundColor}
         color={iconColor}
-        text="POA Github"
-        url="https://github.com/poanetwork"
+        text="GakuenCity Github"
+        url="https://github.com/GakuenCity"
       />
-      <IconPOA text="POA Network" url="https://poa.net" backgroundColor={backgroundColor} color={iconColor} />
+      {/*<IconPOA text="POA Network" url="https://poa.net" backgroundColor={backgroundColor} color={iconColor} />*/}
     </div>
   )
 }

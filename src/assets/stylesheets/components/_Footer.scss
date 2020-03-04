@@ -14,16 +14,8 @@
         background-color: $poa-purple;
     }
 
-    &#{ & }-sokol {
-        background-color: $sokol-cyan;
-    }
-
-    &#{ & }-dai {
-        background-color: $xdai-gray;
-    }
-
-    &#{ & }-kovan {
-        background-color: $kovan-cyan;
+    &#{ & }-test {
+        background-color: $test-cyan;
     }
 }
 
@@ -52,9 +44,5 @@
 
     @media (min-width: $breakpoint-md) {
         padding-top: 0;
-    }
-
-    .sw-Footer-dai & {
-        color: #333;
     }
 }

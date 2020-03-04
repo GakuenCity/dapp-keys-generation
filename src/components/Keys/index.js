@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Tooltip from 'rc-tooltip'
 import { ButtonDownload } from '../ButtonDownload'
-
+import { messages } from '../../utils/messages'
 const encodeJson = json => {
   const encoded = window.encodeURIComponent(JSON.stringify(json))
   return `data:application/json;charset=utf-8,${encoded}`
@@ -16,27 +16,27 @@ export default class Keys extends Component {
       copyBtns: {
         copyMiningPass: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         },
         copyVotingPass: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         },
         copyPayoutPass: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         },
         copyMiningKey: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         },
         copyVotingKey: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         },
         copyPayoutKey: {
           visible: false,
-          text: 'Copy'
+          text: messages.COPY
         }
       }
     }
@@ -56,7 +56,7 @@ export default class Keys extends Component {
   onVisibleChange(id) {
     let copyBtns = this.state.copyBtns
     copyBtns[id].visible = !copyBtns[id].visible
-    copyBtns[id].text = 'Copy'
+    copyBtns[id].text = messages.COPY
     this.setState({
       copyBtns
     })
@@ -64,7 +64,7 @@ export default class Keys extends Component {
   onCopyBtnClick(e) {
     const id = e.target.id
     let copyBtns = this.state.copyBtns
-    copyBtns[id].text = 'Copied!'
+    copyBtns[id].text = messages.COPIED
     this.setState({
       copyBtns
     })
@@ -75,7 +75,7 @@ export default class Keys extends Component {
     return (
       <div className={`ky-Keys`}>
         <div className="ky-Keys_Block">
-          <h2 className="ky-Keys_BlockTitle">Mining key</h2>
+          <h2 className="ky-Keys_BlockTitle">{messages.MININGKEY}</h2>
           <div className="ky-Keys_HashContainer">
             <p className={`ky-Keys_Hash ky-Keys_Hash-${networkBranch}`} id="miningKey">
               0x
@@ -101,7 +101,7 @@ export default class Keys extends Component {
             </Tooltip>
           </div>
           <div className="ky-Keys_PasswordContainer">
-            <label className="ky-Keys_PasswordLabel">Password:</label>
+            <label className="ky-Keys_PasswordLabel">{messages.PASSWORD}:</label>
             <input
               className="ky-Keys_PasswordInput"
               defaultValue={this.props.mining.password}
@@ -132,17 +132,19 @@ export default class Keys extends Component {
           <p className="ky-Keys_Description">
             Download this key and use it in your mining node to validate blocks in the network. Mined coins will be
             deposited to your payout account.
+            <br />
+            {messages.MININGKEYTEXT}
           </p>
           <ButtonDownload
             download={`mining_${this.props.mining.jsonStore.address}.json`}
             href={encodeJson(this.props.mining.jsonStore)}
             id="miningKeyDownload"
             networkBranch={networkBranch}
-            text="Download Mining Key"
+            text={`${messages.DOWNLOAD}${messages.MININGKEY}`}
           />
         </div>
         <div className="ky-Keys_Block">
-          <h2 className="ky-Keys_BlockTitle">Payout key</h2>
+          <h2 className="ky-Keys_BlockTitle">{messages.PAYOUTKEY}</h2>
           <div className="ky-Keys_HashContainer">
             <p className={`ky-Keys_Hash ky-Keys_Hash-${networkBranch}`} id="payoutKey">
               0x
@@ -168,7 +170,7 @@ export default class Keys extends Component {
             </Tooltip>
           </div>
           <div className="ky-Keys_PasswordContainer">
-            <label className="ky-Keys_PasswordLabel">Password:</label>
+            <label className="ky-Keys_PasswordLabel">{messages.PASSWORD}:</label>
             <input
               className="ky-Keys_PasswordInput"
               defaultValue={this.props.payout.password}
@@ -198,17 +200,19 @@ export default class Keys extends Component {
           </div>
           <p className="ky-Keys_Description">
             Download this key and use it on your client node/wallet to spend earned coins.
+            <br />
+            {messages.PAYOUTKEYTEXT}
           </p>
           <ButtonDownload
             download={`payout_${this.props.payout.jsonStore.address}.json`}
             href={encodeJson(this.props.payout.jsonStore)}
             id="payoutKeyDownload"
             networkBranch={networkBranch}
-            text="Download Payout Key"
+            text={`${messages.DOWNLOAD}${messages.PAYOUTKEY}`}
           />
         </div>
         <div className="ky-Keys_Block">
-          <h2 className="ky-Keys_BlockTitle">Voting key</h2>
+          <h2 className="ky-Keys_BlockTitle">投票(Voting)密钥</h2>
           <div className="ky-Keys_HashContainer">
             <p className={`ky-Keys_Hash ky-Keys_Hash-${networkBranch}`} id="votingKey">
               0x
@@ -234,7 +238,7 @@ export default class Keys extends Component {
             </Tooltip>
           </div>
           <div className="ky-Keys_PasswordContainer">
-            <label className="ky-Keys_PasswordLabel">Password:</label>
+            <label className="ky-Keys_PasswordLabel">{messages.PASSWORD}:</label>
             <input
               className="ky-Keys_PasswordInput"
               defaultValue={this.props.voting.password}
@@ -265,13 +269,15 @@ export default class Keys extends Component {
           <p className="ky-Keys_Description">
             Download this key and use it on your client node to vote for necessary ballots, such as adding or removing
             miners from the network.
+            <br />
+            {messages.VOTINGKEYTEXT}
           </p>
           <ButtonDownload
             download={`voting_${this.props.voting.jsonStore.address}.json`}
             href={encodeJson(this.props.voting.jsonStore)}
             id="votingKeyDownload"
             networkBranch={networkBranch}
-            text="Download Voting Key"
+            text={`${messages.DOWNLOAD}${messages.VOTINGKEY}`}
           />
         </div>
         <div className={`ky-Keys_Block ky-Keys_Block-${networkBranch}`}>
@@ -283,10 +289,12 @@ export default class Keys extends Component {
               d="M24 48C10.745 48 0 37.255 0 24S10.745 0 24 0s24 10.745 24 24-10.745 24-24 24zm0-46C11.85 2 2 11.85 2 24s9.85 22 22 22 22-9.85 22-22S36.15 2 24 2zm0 35a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0-6a1 1 0 0 1-1-1V12a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"
             />
           </svg>
-          <h2 className={`ky-Keys_BlockTitle ky-Keys_BlockTitle-${networkBranch}`}>Important</h2>
+          <h2 className={`ky-Keys_BlockTitle ky-Keys_BlockTitle-${networkBranch}`}>{messages.ATTENTION}</h2>
           <p className={`ky-Keys_Warning ky-Keys_Warning-${networkBranch}`}>
             Do not close this tab until you download all keys and save passwords. Keep keys secure and protected. If you
             lose your keys, you will need to get a new initial key using Voting DAPP.
+            <br />
+            {messages.WARNINGTEXT}
           </p>
         </div>
       </div>

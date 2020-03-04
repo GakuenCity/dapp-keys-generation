@@ -18,16 +18,14 @@ var toAscii = function(hex) {
 }
 
 function addressesURL(branch) {
-  const URL = `https://raw.githubusercontent.com/${constants.organization}/${constants.repoName}/${branch}/${
-    constants.addressesSourceFile
-  }`
+  const URL = `https://raw.githubusercontent.com/${constants.organization}/${constants.repoName}/${branch}/${constants.addressesSourceFile}`
+  console.log(URL)
   return URL
 }
 
 function ABIURL(branch, contract) {
-  const URL = `https://raw.githubusercontent.com/${constants.organization}/${constants.repoName}/${branch}/abis/${
-    constants.ABIsSources[contract]
-  }`
+  const URL = `https://raw.githubusercontent.com/${constants.organization}/${constants.repoName}/${branch}/abis/${constants.ABIsSources[contract]}`
+  console.log(URL)
   return URL
 }
 
@@ -40,13 +38,10 @@ function getABI(branch, contract) {
 
 function wrongRepoAlert(addr) {
   var content = document.createElement('div')
-  content.innerHTML = `<div>
-    Something went wrong!<br/><br/>
-    ${messages.wrongRepo(addr)}
-  </div>`
+  content.innerHTML = messages.wrongRepo(addr)
   swal({
     icon: 'error',
-    title: 'Error',
+    title: messages.ERROR,
     content: content
   })
 }

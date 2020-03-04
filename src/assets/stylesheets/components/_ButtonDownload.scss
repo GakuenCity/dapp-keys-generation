@@ -13,22 +13,10 @@ $sw-ButtonDownload-height: 44px !default;
         @include button-shadow($poa-purple);
     }
 
-    &#{ & }-sokol {
-        background-color: $sokol-cyan;
-        @include button-focus-active-hover($sokol-cyan);
-        @include button-shadow($sokol-cyan);
-    }
-
-    &#{ & }-dai {
-        background-color: $xdai-orange;
-        @include button-focus-active-hover($xdai-orange);
-        @include button-shadow($xdai-orange);
-    }
-
-    &#{ & }-kovan {
-        background-color: $kovan-cyan;
-        @include button-focus-active-hover($kovan-cyan);
-        @include button-shadow($kovan-cyan);
+    &#{ & }-test {
+        background-color: $test-cyan;
+        @include button-focus-active-hover($test-cyan);
+        @include button-shadow($test-cyan);
     }
 
     .ky-Keys_Block & {

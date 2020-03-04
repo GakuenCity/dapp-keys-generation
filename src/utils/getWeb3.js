@@ -1,11 +1,6 @@
 import Web3 from 'web3'
 import { constants } from './constants'
-
-const errorMsgNoMetamaskAccount = `You haven't chosen any account in MetaMask.
-Please choose your initial key in MetaMask and reload the page.
-Check POA Network <a href='https://github.com/poanetwork/wiki' target='blank'>wiki</a> for more info.`
-
-const errorMsgDeniedAccess = 'You have denied access to your accounts'
+import { messages } from './messages'
 
 function generateElement(msg) {
   let errorNode = document.createElement('div')
@@ -28,8 +23,8 @@ let getWeb3 = () => {
           await window.ethereum.enable()
         } catch (e) {
           reject({
-            msg: errorMsgDeniedAccess,
-            node: generateElement(errorMsgDeniedAccess)
+            msg: messages.DENIEDACCESS,
+            node: generateElement(messages.DENIEDACCESS)
           })
           return
         }
@@ -39,8 +34,8 @@ let getWeb3 = () => {
       } else {
         console.error('Metamask not found')
         reject({
-          msg: errorMsgNoMetamaskAccount,
-          node: generateElement(errorMsgNoMetamaskAccount)
+          msg: messages.NOMETAMASKACCOUNT,
+          node: generateElement(messages.NOMETAMASKACCOUNT)
         })
         return
       }
@@ -55,15 +50,12 @@ let getWeb3 = () => {
         netIdName = constants.NETWORKS[netId].NAME
         console.log(`This is ${netIdName}`)
       } else {
-        netIdName = 'ERROR'
-        errorMsg = `You aren't connected to POA Network.
-            Please switch on Metamask and refresh the page.
-            Check POA Network <a href='https://github.com/poanetwork/wiki' target='blank'>wiki</a> for more info.
-            <b>Current Network ID</b> is <i>${netId}</i>`
+        netIdName = messages.ERROR
+        errorMsg = messages.wrongNetwork(netId)
         console.log('This is an unknown network.')
       }
 
-      document.title = `${netIdName} - DApp Keys Generation`
+      document.title = `${netIdName} - ${messages.TITLE}`
 
       if (errorMsg !== null) {
         reject({ msg: errorMsg, node: generateElement(errorMsg) })
@@ -74,8 +66,8 @@ let getWeb3 = () => {
       const defaultAccount = accounts[0] || null
       if (defaultAccount === null) {
         reject({
-          msg: errorMsgNoMetamaskAccount,
-          node: generateElement(errorMsgNoMetamaskAccount)
+          msg: messages.NOMETAMASKACCOUNT,
+          node: generateElement(messages.NOMETAMASKACCOUNT)
         })
         return
       }

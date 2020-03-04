@@ -578,6 +578,15 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   display: flex;
   overflow: auto; }
 
+body, input, .navigator-toolbox, .toolbarbutton-text, .sidebar-title {
+  text-shadow: 0px 0px 1px #ACACAC; }
+
+body {
+  font-family: "Roboto Slab", "Noto Sans", SegoeUI, "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "WenQuanYi Micro Hei", "Yu Gothic UI", "Meiryo UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+
+.swal-overlay--show-modal {
+  z-index: 9999999 !important; }
+
 .lo-App {
   align-items: center;
   display: flex;
@@ -644,27 +653,13 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
       background-color: #44227d; }
     .sw-ButtonDownload.sw-ButtonDownload-core[disabled]:focus, .sw-ButtonDownload.sw-ButtonDownload-core[disabled].active, .sw-ButtonDownload.sw-ButtonDownload-core[disabled]:hover {
       background-color: #5a2da5; }
-  .sw-ButtonDownload.sw-ButtonDownload-sokol {
+  .sw-ButtonDownload.sw-ButtonDownload-test {
     background-color: #8ce1d7;
     box-shadow: 0 5px 10px 0 rgba(140, 225, 215, 0.3); }
-    .sw-ButtonDownload.sw-ButtonDownload-sokol:focus, .sw-ButtonDownload.sw-ButtonDownload-sokol:active, .sw-ButtonDownload.sw-ButtonDownload-sokol:hover {
+    .sw-ButtonDownload.sw-ButtonDownload-test:focus, .sw-ButtonDownload.sw-ButtonDownload-test:active, .sw-ButtonDownload.sw-ButtonDownload-test:hover {
       background-color: #64d6c9; }
-    .sw-ButtonDownload.sw-ButtonDownload-sokol[disabled]:focus, .sw-ButtonDownload.sw-ButtonDownload-sokol[disabled].active, .sw-ButtonDownload.sw-ButtonDownload-sokol[disabled]:hover {
+    .sw-ButtonDownload.sw-ButtonDownload-test[disabled]:focus, .sw-ButtonDownload.sw-ButtonDownload-test[disabled].active, .sw-ButtonDownload.sw-ButtonDownload-test[disabled]:hover {
       background-color: #8ce1d7; }
-  .sw-ButtonDownload.sw-ButtonDownload-dai {
-    background-color: #fec042;
-    box-shadow: 0 5px 10px 0 rgba(254, 192, 66, 0.3); }
-    .sw-ButtonDownload.sw-ButtonDownload-dai:focus, .sw-ButtonDownload.sw-ButtonDownload-dai:active, .sw-ButtonDownload.sw-ButtonDownload-dai:hover {
-      background-color: #feaf0f; }
-    .sw-ButtonDownload.sw-ButtonDownload-dai[disabled]:focus, .sw-ButtonDownload.sw-ButtonDownload-dai[disabled].active, .sw-ButtonDownload.sw-ButtonDownload-dai[disabled]:hover {
-      background-color: #fec042; }
-  .sw-ButtonDownload.sw-ButtonDownload-kovan {
-    background-color: #28aca4;
-    box-shadow: 0 5px 10px 0 rgba(40, 172, 164, 0.3); }
-    .sw-ButtonDownload.sw-ButtonDownload-kovan:focus, .sw-ButtonDownload.sw-ButtonDownload-kovan:active, .sw-ButtonDownload.sw-ButtonDownload-kovan:hover {
-      background-color: #1e837d; }
-    .sw-ButtonDownload.sw-ButtonDownload-kovan[disabled]:focus, .sw-ButtonDownload.sw-ButtonDownload-kovan[disabled].active, .sw-ButtonDownload.sw-ButtonDownload-kovan[disabled]:hover {
-      background-color: #28aca4; }
   .ky-Keys_Block .sw-ButtonDownload {
     margin-top: auto; }
     @media (min-width: 992px) {
@@ -715,27 +710,13 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
       background-color: #44227d; }
     .sw-ButtonGenerate.sw-ButtonGenerate-core[disabled]:focus, .sw-ButtonGenerate.sw-ButtonGenerate-core[disabled].active, .sw-ButtonGenerate.sw-ButtonGenerate-core[disabled]:hover {
       background-color: #5a2da5; }
-  .sw-ButtonGenerate.sw-ButtonGenerate-sokol {
+  .sw-ButtonGenerate.sw-ButtonGenerate-test {
     background-color: #8ce1d7;
     box-shadow: 0 5px 10px 0 rgba(140, 225, 215, 0.3); }
-    .sw-ButtonGenerate.sw-ButtonGenerate-sokol:focus, .sw-ButtonGenerate.sw-ButtonGenerate-sokol:active, .sw-ButtonGenerate.sw-ButtonGenerate-sokol:hover {
+    .sw-ButtonGenerate.sw-ButtonGenerate-test:focus, .sw-ButtonGenerate.sw-ButtonGenerate-test:active, .sw-ButtonGenerate.sw-ButtonGenerate-test:hover {
       background-color: #64d6c9; }
-    .sw-ButtonGenerate.sw-ButtonGenerate-sokol[disabled]:focus, .sw-ButtonGenerate.sw-ButtonGenerate-sokol[disabled].active, .sw-ButtonGenerate.sw-ButtonGenerate-sokol[disabled]:hover {
+    .sw-ButtonGenerate.sw-ButtonGenerate-test[disabled]:focus, .sw-ButtonGenerate.sw-ButtonGenerate-test[disabled].active, .sw-ButtonGenerate.sw-ButtonGenerate-test[disabled]:hover {
       background-color: #8ce1d7; }
-  .sw-ButtonGenerate.sw-ButtonGenerate-dai {
-    background-color: #fec042;
-    box-shadow: 0 5px 10px 0 rgba(254, 192, 66, 0.3); }
-    .sw-ButtonGenerate.sw-ButtonGenerate-dai:focus, .sw-ButtonGenerate.sw-ButtonGenerate-dai:active, .sw-ButtonGenerate.sw-ButtonGenerate-dai:hover {
-      background-color: #feaf0f; }
-    .sw-ButtonGenerate.sw-ButtonGenerate-dai[disabled]:focus, .sw-ButtonGenerate.sw-ButtonGenerate-dai[disabled].active, .sw-ButtonGenerate.sw-ButtonGenerate-dai[disabled]:hover {
-      background-color: #fec042; }
-  .sw-ButtonGenerate.sw-ButtonGenerate-kovan {
-    background-color: #28aca4;
-    box-shadow: 0 5px 10px 0 rgba(40, 172, 164, 0.3); }
-    .sw-ButtonGenerate.sw-ButtonGenerate-kovan:focus, .sw-ButtonGenerate.sw-ButtonGenerate-kovan:active, .sw-ButtonGenerate.sw-ButtonGenerate-kovan:hover {
-      background-color: #1e837d; }
-    .sw-ButtonGenerate.sw-ButtonGenerate-kovan[disabled]:focus, .sw-ButtonGenerate.sw-ButtonGenerate-kovan[disabled].active, .sw-ButtonGenerate.sw-ButtonGenerate-kovan[disabled]:hover {
-      background-color: #28aca4; }
   .hm-Home .sw-ButtonGenerate {
     width: 100%; }
     @media (min-width: 768px) {
@@ -770,12 +751,8 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   width: 100%; }
   .sw-Footer.sw-Footer-core {
     background-color: #5a2da5; }
-  .sw-Footer.sw-Footer-sokol {
+  .sw-Footer.sw-Footer-test {
     background-color: #8ce1d7; }
-  .sw-Footer.sw-Footer-dai {
-    background-color: #f2f6f8; }
-  .sw-Footer.sw-Footer-kovan {
-    background-color: #28aca4; }
 
 .sw-Footer_Content {
   max-width: 100%;
@@ -811,8 +788,6 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   @media (min-width: 768px) {
     .sw-Footer_Text {
       padding-top: 0; } }
-  .sw-Footer-dai .sw-Footer_Text {
-    color: #333; }
 
 .sw-Header {
   align-items: center;
@@ -826,12 +801,8 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   width: 100%; }
   .sw-Header.sw-Header-core {
     background-color: #5a2da5; }
-  .sw-Header.sw-Header-sokol {
+  .sw-Header.sw-Header-test {
     background-color: #8ce1d7; }
-  .sw-Header.sw-Header-dai {
-    background-color: #f2f6f8; }
-  .sw-Header.sw-Header-kovan {
-    background-color: #28aca4; }
 
 .sw-Header_Content {
   max-width: 100%;
@@ -951,10 +922,8 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
       margin-bottom: 0; } }
   .ky-Keys_Block.ky-Keys_Block-core {
     border-color: #5a2da5; }
-  .ky-Keys_Block.ky-Keys_Block-sokol {
+  .ky-Keys_Block.ky-Keys_Block-test {
     border-color: #8ce1d7; }
-  .ky-Keys_Block.ky-Keys_Block-kovan {
-    border-color: #28aca4; }
 
 .ky-Keys_BlockTitle {
   color: #333;
@@ -963,14 +932,6 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   line-height: 1.2;
   margin: 0 0 25px;
   text-align: left; }
-  .ky-Keys_BlockTitle.ky-Keys_BlockTitle-core {
-    color: #5a2da5; }
-  .ky-Keys_BlockTitle.ky-Keys_BlockTitle-sokol {
-    color: #8ce1d7; }
-  .ky-Keys_BlockTitle.ky-Keys_BlockTitle-kovan {
-    color: #28aca4; }
-  .ky-Keys_BlockTitle.ky-Keys_BlockTitle-dai {
-    color: #333; }
 
 .ky-Keys_HashContainer {
   display: flex;
@@ -984,17 +945,9 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   margin: 0;
   text-align: left;
   word-break: break-word; }
-  .ky-Keys_Hash.ky-Keys_Hash-core {
-    color: #5a2da5; }
-  .ky-Keys_Hash.ky-Keys_Hash-sokol {
-    color: #8ce1d7; }
-  .ky-Keys_Hash.ky-Keys_Hash-kovan {
-    color: #28aca4; }
-  .ky-Keys_Hash.ky-Keys_Hash-dai {
-    color: #333; }
 
 .ky-Keys_Copy {
-  background-image: url("../../assets/images/Keys/poa.svg");
+  background-image: url("../../assets/images/Keys/core.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 14px 14px;
@@ -1002,13 +955,9 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   height: 20px;
   width: 20px; }
   .ky-Keys_Copy.ky-Keys_Copy-core {
-    background-image: url("../../assets/images/Keys/poa.svg"); }
-  .ky-Keys_Copy.ky-Keys_Copy-sokol {
-    background-image: url("../../assets/images/Keys/sokol.svg"); }
-  .ky-Keys_Copy.ky-Keys_Copy-dai {
-    background-image: url("../../assets/images/Keys/dai.svg"); }
-  .ky-Keys_Copy.ky-Keys_Copy-kovan {
-    background-image: url("../../assets/images/Keys/kovan.svg"); }
+    background-image: url("../../assets/images/Keys/core.svg"); }
+  .ky-Keys_Copy.ky-Keys_Copy-test {
+    background-image: url("../../assets/images/Keys/test.svg"); }
   .ky-Keys_HashContainer .ky-Keys_Copy {
     margin-left: 3px;
     margin-top: -4px; }
@@ -1055,14 +1004,6 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   line-height: 1.5;
   margin: 0;
   text-align: left; }
-  .ky-Keys_Warning.ky-Keys_Warning-core {
-    color: #5a2da5; }
-  .ky-Keys_Warning.ky-Keys_Warning-sokol {
-    color: #8ce1d7; }
-  .ky-Keys_Warning.ky-Keys_Warning-kovan {
-    color: #28aca4; }
-  .ky-Keys_Warning.ky-Keys_Warning-dai {
-    color: #333; }
 
 .ky-Keys_WarningIcon {
   height: 48px;
@@ -1072,14 +1013,8 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
 .ky-Keys_WarningIconPath.ky-Keys_WarningIconPath-core {
   fill: #5a2da5; }
 
-.ky-Keys_WarningIconPath.ky-Keys_WarningIconPath-sokol {
+.ky-Keys_WarningIconPath.ky-Keys_WarningIconPath-test {
   fill: #8ce1d7; }
-
-.ky-Keys_WarningIconPath.ky-Keys_WarningIconPath-kovan {
-  fill: #28aca4; }
-
-.ky-Keys_WarningIconPath.ky-Keys_WarningIconPath-dai {
-  fill: #fec042; }
 
 .ld-Loading {
   align-items: center;
@@ -1095,12 +1030,8 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
   z-index: 1000000; }
   .ld-Loading.ld-Loading-core {
     background-color: rgba(90, 45, 165, 0.5); }
-  .ld-Loading.ld-Loading-sokol {
+  .ld-Loading.ld-Loading-test {
     background-color: rgba(140, 225, 215, 0.5); }
-  .ld-Loading.ld-Loading-dai {
-    background-color: rgba(254, 192, 66, 0.5); }
-  .ld-Loading.ld-Loading-kovan {
-    background-color: rgba(40, 172, 164, 0.5); }
 
 .ld-Loading_Animation {
   display: flex;
@@ -1143,58 +1074,30 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
     opacity: .2;
     transform: scale(0.3); } }
 
-.sw-LogoDai {
+.sw-LogoCore {
   display: block;
   text-decoration: none; }
-  .sw-Header .sw-LogoDai {
-    height: 58px;
-    width: 167px; }
-  .sw-Footer .sw-LogoDai {
-    width: 120px; }
-
-.sw-LogoDai_Image {
-  display: block;
-  height: 100%;
-  width: 100%; }
-
-.sw-LogoPOA {
-  display: block;
-  text-decoration: none; }
-  .sw-Header .sw-LogoPOA {
+  .sw-Header .sw-LogoCore {
     height: 26px;
     width: 167px; }
-  .sw-Footer .sw-LogoPOA {
+  .sw-Footer .sw-LogoCore {
     width: 130px; }
 
-.sw-LogoPOA_Image {
+.sw-LogoCore_Image {
   display: block;
   height: 100%;
   width: 100%; }
 
-.sw-LogoSokol {
+.sw-LogoTest {
   display: block;
   text-decoration: none; }
-  .sw-Header .sw-LogoSokol {
+  .sw-Header .sw-LogoTest {
     height: 30px;
     width: 178px; }
-  .sw-Footer .sw-LogoSokol {
+  .sw-Footer .sw-LogoTest {
     height: 26px; }
 
-.sw-LogoSokol_Image {
-  display: block;
-  height: 100%;
-  width: 100%; }
-
-.sw-LogoKovan {
-  display: block;
-  text-decoration: none; }
-  .sw-Header .sw-LogoKovan {
-    height: 30px;
-    width: 178px; }
-  .sw-Footer .sw-LogoKovan {
-    height: 26px; }
-
-.sw-LogoKovan_Image {
+.sw-LogoTest_Image {
   display: block;
   height: 100%;
   width: 100%; }
@@ -1233,30 +1136,14 @@ body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
     @media (-webkit-min-device-pixel-ratio: 3), (-moz-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
       .hm-MainImage_Img, .hm-MainImage_Img.hm-MainImage_Img-core {
         background-image: url("../../assets/images/MainImage/poa/image@3x.png"); } }
-  .hm-MainImage_Img.hm-MainImage_Img-sokol {
-    background-image: url("../../assets/images/MainImage/sokol/image.png"); }
+  .hm-MainImage_Img.hm-MainImage_Img-test {
+    background-image: url("../../assets/images/MainImage/test/image.png"); }
     @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-sokol {
-        background-image: url("../../assets/images/MainImage/sokol/image@2x.png"); } }
+      .hm-MainImage_Img.hm-MainImage_Img-test {
+        background-image: url("../../assets/images/MainImage/test/image@2x.png"); } }
     @media (-webkit-min-device-pixel-ratio: 3), (-moz-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-sokol {
-        background-image: url("../../assets/images/MainImage/sokol/image@3x.png"); } }
-  .hm-MainImage_Img.hm-MainImage_Img-dai {
-    background-image: url("../../assets/images/MainImage/dai/image.png"); }
-    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-dai {
-        background-image: url("../../assets/images/MainImage/dai/image@2x.png"); } }
-    @media (-webkit-min-device-pixel-ratio: 3), (-moz-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-dai {
-        background-image: url("../../assets/images/MainImage/dai/image@3x.png"); } }
-  .hm-MainImage_Img.hm-MainImage_Img-kovan {
-    background-image: url("../../assets/images/MainImage/kovan/image.png"); }
-    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-kovan {
-        background-image: url("../../assets/images/MainImage/kovan/image@2x.png"); } }
-    @media (-webkit-min-device-pixel-ratio: 3), (-moz-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-      .hm-MainImage_Img.hm-MainImage_Img-kovan {
-        background-image: url("../../assets/images/MainImage/kovan/image@3x.png"); } }
+      .hm-MainImage_Img.hm-MainImage_Img-test {
+        background-image: url("../../assets/images/MainImage/test/image@3x.png"); } }
 
 .ft-SocialIcons {
   align-items: center;

@@ -21,15 +21,7 @@
         @include image-retina('#{ $base-images-path }/MainImage/poa/image', 'png');
     }
 
-    &#{ & }-sokol {
-        @include image-retina('#{ $base-images-path }/MainImage/sokol/image', 'png');
-    }
-
-    &#{ & }-dai {
-        @include image-retina('#{ $base-images-path }/MainImage/dai/image', 'png');
-    }
-
-    &#{ & }-kovan {
-        @include image-retina('#{ $base-images-path }/MainImage/kovan/image', 'png');
+    &#{ & }-test {
+        @include image-retina('#{ $base-images-path }/MainImage/test/image', 'png');
     }
 }

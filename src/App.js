@@ -14,6 +14,7 @@ import { Home } from './components/Home'
 import { Loading } from './components/Loading'
 import { constants } from './utils/constants'
 import { getNetworkBranch } from './utils/utils'
+import { messages } from './utils/messages'
 
 import './assets/stylesheets/index.css'
 
@@ -30,7 +31,7 @@ class App extends Component {
     super(props)
     this.onClick = this.onClick.bind(this)
     this.saveFile = blob => {
-      FileSaver.saveAs(blob, `poa_network_validator_keys.zip`)
+      FileSaver.saveAs(blob, `network_validator_keys.zip`)
     }
     this.state = {
       web3Config: {},
@@ -65,7 +66,7 @@ class App extends Component {
           this.setState({ isDisabledBtn: true })
           swal({
             icon: 'warning',
-            title: 'Warning',
+            title: messages.WARNING,
             content: error.node
           })
         }
@@ -116,7 +117,7 @@ class App extends Component {
     zip.file(`${netIdName}_keys/payout_key_${payout.jsonStore.address}.json`, JSON.stringify(payout.jsonStore))
     zip.file(`${netIdName}_keys/payout_password_${payout.jsonStore.address}.txt`, payout.password)
     zip.generateAsync({ type: 'blob' }).then(blob => {
-      FileSaver.saveAs(blob, `poa_network_validator_keys.zip`)
+      FileSaver.saveAs(blob, `network_validator_keys.zip`)
     })
   }
 
@@ -132,14 +133,10 @@ class App extends Component {
 
     if (Number(isValid) !== 1) {
       this.setState({ loading: false })
-      const invalidKeyMsg = `The key is an invalid Initial key<br/>
-      or you're connected to the incorrect chain!<br/>
-      Please make sure you have loaded correct Initial key in MetaMask.<br/><br/>
-      <b>Your current selected key is</b> <i>${initialKey}</i><br/>
-      <b>Current Network ID</b> is <i>${this.state.web3Config.netId}</i>`
+      const invalidKeyMsg = messages.invalidKeyMsg(initialKey, this.state.web3Config.netIdName)
       swal({
         icon: 'error',
-        title: 'Error',
+        title: messages.ERROR,
         content: generateElement(invalidKeyMsg)
       })
       return
@@ -157,7 +154,7 @@ class App extends Component {
         .then(async receipt => {
           if (receipt.status === true || receipt.status === '0x1') {
             this.setState({ loading: false })
-            swal('Congratulations!', 'Your keys are generated!', 'success')
+            swal(messages.CONGRATULATIONS, messages.KEYGENERATED, 'success')
             await this.generateZip({
               mining,
               voting,
@@ -167,15 +164,10 @@ class App extends Component {
           } else {
             this.setState({ loading: false, keysGenerated: false })
             let content = document.createElement('div')
-            let msg = `Transaction failed`
-            content.innerHTML = `<div>
-            Something went wrong!<br/><br/>
-            Please contact Master Of Ceremony<br/><br/>
-            ${msg}
-          </div>`
+            content.innerHTML = messages.genericError(messages.TRANSACTIONFAILED)
             swal({
               icon: 'error',
-              title: 'Error',
+              title: messages.ERROR,
               content: content
             })
           }
@@ -185,16 +177,12 @@ class App extends Component {
           let content = document.createElement('div')
           let msg
           if (error.message.includes(constants.userDeniedTransactionPattern))
-            msg = `Error: ${constants.userDeniedTransactionPattern}`
+            msg = `${messages.ERROR}: ${messages.USERDENIEDTRANSACTIONPATTERN}`
           else msg = error.message
-          content.innerHTML = `<div>
-          Something went wrong!<br/><br/>
-          Please contact Master Of Ceremony<br/><br/>
-          ${msg}
-        </div>`
+          content.innerHTML = messages.genericError(msg)
           swal({
             icon: 'error',
-            title: 'Error',
+            title: messages.ERROR,
             content: content
           })
         })
