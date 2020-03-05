@@ -1,16 +1,13 @@
 {
   "main.css": "static/css/main.ad2f851a.css",
   "main.css.map": "static/css/main.ad2f851a.css.map",
-  "main.js": "static/js/main.12b90721.js",
-  "main.js.map": "static/js/main.12b90721.js.map",
-  "static\\media\\core.svg": "static/media/core.5164715e.svg",
-  "static\\media\\icon.svg": "static/media/icon.93b905e1.svg",
-  "static\\media\\image.png": "static/media/image.d3cbcd05.png",
+  "main.js": "static/js/main.f7bdf5ed.js",
+  "main.js.map": "static/js/main.f7bdf5ed.js.map",
+  "static\\media\\core.svg": "static/media/core.4ea3c1a8.svg",
+  "static\\media\\icon.svg": "static/media/icon.34848660.svg",
+  "static\\media\\image.png": "static/media/image.edc28e1e.png",
   "static\\media\\image@2x.png": "static/media/image@2x.fc122fe4.png",
-  "static\\media\\image@3x.png": "static/media/image@3x.d48293ff.png",
-  "static\\media\\kovan.svg": "static/media/kovan.d48059af.svg",
-  "static\\media\\logo.svg": "static/media/logo.fe541bad.svg",
-  "static\\media\\sokol.svg": "static/media/sokol.4d81927f.svg",
-  "static\\media\\test.svg": "static/media/test.6f3ee258.svg",
-  "static\\media\\xdai.svg": "static/media/xdai.e2a9af13.svg"
+  "static\\media\\image@3x.png": "static/media/image@3x.480826a7.png",
+  "static\\media\\logo.svg": "static/media/logo.70cb246f.svg",
+  "static\\media\\test.svg": "static/media/test.4d81927f.svg"
 }
